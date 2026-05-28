@@ -30,6 +30,18 @@ namespace CRUD.Controllers
 
             return Ok(data);
         }
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetId(int id)
+        {
+            var data = await _service.orderId(id);
+
+            if (data == null)
+            {
+                return NotFound("User Is Not Found");
+            }
+
+            return Ok(data);
+        }
 
     }
 }
