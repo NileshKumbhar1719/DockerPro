@@ -10,5 +10,7 @@ namespace CRUD.Repository
         Task<List<OrderDTOs>> GetAllData(
            int pageNumber,
            int pageSize);
+
+        Task<OrderDTOs?> orderById(int id);
     }
 }

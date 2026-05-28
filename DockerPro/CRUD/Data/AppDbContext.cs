@@ -11,6 +11,7 @@ namespace CRUD.Data
         {
         }
 
+        public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDTOs> Order { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

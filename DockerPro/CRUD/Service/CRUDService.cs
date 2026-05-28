@@ -24,5 +24,10 @@ namespace CRUD.Service
             return await _repo
                 .GetAllData(pageNumber, pageSize);
         }
+
+        public async Task<OrderDTOs?> orderId(int id)
+        {
+            return await _repo.orderById(id);
+        }
     }
 }

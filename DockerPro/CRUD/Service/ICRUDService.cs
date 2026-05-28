@@ -9,6 +9,9 @@ namespace CRUD.Service
         Task<List<OrderDTOs>> GetAllData(
             int pageNumber,
             int pageSize);
+        Task<OrderDTOs?> orderId(int id);
+    
 
-    }
+}
+    
 }

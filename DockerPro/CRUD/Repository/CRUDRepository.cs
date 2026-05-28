@@ -50,5 +50,17 @@ namespace CRUD.Repository
 
             return data;
         }
+
+        public async Task<OrderDTOs?> orderById(int id)
+        {
+            var data = await _Context.Order.Where(x => x.Id == id).Select(x => new OrderDTOs
+            {
+                Id = x.Id,
+                Status = x.Status,
+                TotalAmount = x.TotalAmount
+
+            }).FirstOrDefaultAsync();
+            return data;
+        }
     }
 }

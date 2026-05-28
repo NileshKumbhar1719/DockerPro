@@ -11,6 +11,18 @@
       ],
       "UpstreamPathTemplate": "/api/OrderPro",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/OrderPro/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "crud",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/api/OrderPro/{id}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
     }
   ],
   "GlobalConfiguration": {
